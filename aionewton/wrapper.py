@@ -22,7 +22,7 @@ class AioNewton:
     # provided `expression` and the `result`.
 
     async def simplify(self, expression: str) -> dict:
-        """Simplify	2^2+2(2) -> 8"""
+        """Simplify 2^2+2(2) -> 8"""
         return await self.make_request(expression)
 
     async def factor(self, expression: str) -> dict:
@@ -30,23 +30,23 @@ class AioNewton:
         return await self.make_request(expression)
 
     async def derive(self, expression: str) -> dict:
-        """Derive -> x^2+2x	-> 2 x + 2"""
+        """Derive x^2+2x -> 2 x + 2"""
         return await self.make_request(expression)
 
     async def integrate(self, expression: str) -> dict:
-        """Integrate x^2+2x	-> 1/3 x^3 + x^2 + C"""
+        """Integrate x^2+2x -> 1/3 x^3 + x^2 + C"""
         return await self.make_request(expression)
 
     async def zeroes(self, expression: str) -> dict:
-        """Find 0's	x^2+2x -> [-2, 0]"""
+        """Find 0's x^2+2x -> [-2, 0]"""
         return await self.make_request(expression)
 
     async def tangent(self, expression: str) -> dict:
-        """Find Tangent	2lx^3 -> 12 x + -16"""
+        """Find Tangent 2lx^3 -> 12 x + -16"""
         return await self.make_request(expression)
 
     async def area(self, expression: str) -> dict:
-        """Area Under Curve	2:4lx^3 -> 60"""
+        """Area Under Curve 2:4lx^3 -> 60"""
         return await self.make_request(expression)
 
     async def arccos(self, expression: str) -> dict:
@@ -54,7 +54,7 @@ class AioNewton:
         return await self.make_request(expression)
 
     async def arcsin(self, expression: str) -> dict:
-        """Inverse Sine	0 -> 0"""
+        """Inverse Sine 0 -> 0"""
         return await self.make_request(expression)
 
     async def arctan(self, expression: str) -> dict:
