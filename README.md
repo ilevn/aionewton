@@ -3,7 +3,7 @@
 An `asnycio`-based  wrapper for [Newton](https://newton.now.sh).
 The Github project can be found [here.](https://github.com/aunyks/newton-api)
 
-Installation
+## Installation
 ```
 pip install aionewton
 ```
