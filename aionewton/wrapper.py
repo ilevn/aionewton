@@ -1,6 +1,7 @@
 """An asnycio-based wrapper for `https://newton.now.sh`"""
 
 import inspect
+from urllib.parse import quote
 
 import aiohttp
 
@@ -11,7 +12,9 @@ class AioNewton:
         """Internal function to request a page by using a given string"""
 
         operation = inspect.stack()[1][3]
-        url = f"https://newton.now.sh/{operation}/{expression}"
+        encoded_expression = quote(expression, safe='')
+        url = f"https://newton.now.sh/{operation}/{encoded_expression}"
+
         async with aiohttp.ClientSession() as session:
             async with session.get(url) as req:
                 assert isinstance(req, aiohttp.ClientResponse)
