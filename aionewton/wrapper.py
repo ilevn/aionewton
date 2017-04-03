@@ -52,8 +52,20 @@ class AioNewton:
         """Area Under Curve 2:4lx^3 -> 60"""
         return await self.make_request(expression)
 
-    async def arccos(self, expression: str) -> dict:
+    async def cos(self, expression: str) -> dict:
         """Cosine pi -> -1"""
+        return await self.make_request(expression)
+
+    async def sin(self, expression: str) -> dict:
+        """Sine 0 -> 0"""
+        return await self.make_request(expression)
+
+    async def tan(self, expression: str) -> dict:
+        """Tangent 0 -> 0"""
+        return await self.make_request(expression)
+
+    async def arccos(self, expression: str) -> dict:
+        """Inverse Cosine 1 -> 0"""
         return await self.make_request(expression)
 
     async def arcsin(self, expression: str) -> dict:
