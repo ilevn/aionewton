@@ -26,8 +26,8 @@ async def main():
     to_calculate = input("Expression: ") # 2^2+2(2)
     # Get calculation for `to_calculate`.
     result = await calculate.simplify(to_calculate)
-    # Return a dictionary with `operation`, `expression`
-    # and `result` as keys.
+    # Return a Result object with `operation`, `expression`
+    # and `result` as attributes.
     print(result)
 
 loop.run_until_complete(main())
