@@ -16,18 +16,18 @@ pip install git+https://github.com/ilevn/aionewton
 
 ```py
 import asyncio
-from aionewton import AioNewton
+import aionewton
 
-# Create a new instance of the API wrapper.
-calculate = Aionewton()
+# Get event loop
 loop = asyncio.get_event_loop()
 
 async def main():
-    to_calculate = input("Expression: ") # 2^2+2(2)
     # Get calculation for `to_calculate`.
-    result = await calculate.simplify(to_calculate)
+    to_calculate = input("Expression: ") # 2^2+2(2)
+    
     # Return a Result object with `operation`, `expression`
     # and `result` as attributes.
+    result = await aionewton.simplify(to_calculate)
     print(result)
 
 loop.run_until_complete(main())

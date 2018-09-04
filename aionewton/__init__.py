@@ -2,9 +2,7 @@
 An asnycio-based wrapper for `https://newton.now.sh`
 """
 
-from aionewton.wrapper import AioNewton
+from .extensions import *
 
-__version__ = "1.0.4"
+__version__ = "1.0.5"
 __author__ = "Nils Theres"
-
-__all__ = "AioNewton"
